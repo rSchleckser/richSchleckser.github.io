@@ -12,11 +12,11 @@ Welcome to my portfolio website! This site showcases my projects, skills, and ex
 
 ## Overview
 
-This portfolio website serves as a central hub for my professional work. It highlights my projects, including [Mage Hopper](#mage-hopper), [Buster Movies](#buster-movies), and [QuizMate](#quizmate). The site is designed to be user-friendly and visually appealing, showcasing my skills in a clean and organized manner.
+This portfolio website serves as a central hub for my professional work. It highlights my projects, including [Mage Hopper](https://github.com/rSchleckser/mage-hopper), [Buster Movies](https://github.com/rSchleckser/Buster-movies), and [QuizMate](https://github.com/rSchleckser/QuizMate). The site is designed to be user-friendly and visually appealing, showcasing my skills in a clean and organized manner.
 
 ## Features
 
-- **Project Showcase**: Detailed descriptions of my key projects, including [Mage Hopper](#mage-hopper), [Buster Movies](#buster-movies), and [QuizMate](#quizmate).
+- **Project Showcase**: Detailed descriptions of my key projects, including [Mage Hopper](https://github.com/rSchleckser/mage-hopper), [Buster Movies](https://github.com/rSchleckser/Buster-movies), and [QuizMate](https://github.com/rSchleckser/QuizMate).
 - **Skills Section**: An overview of my technical skills and proficiencies.
 - **Contact Information**: Easy access to my contact details and professional profiles.
 - **Responsive Design**: Optimized for various devices and screen sizes to ensure a seamless user experience.
