@@ -31,7 +31,7 @@ This portfolio website serves as a central hub for my professional work. It high
 
 ## How to View
 
-You can view my portfolio website live at [https://rschleckser.github.io/](https://rschleckser.github.io/). For any updates or changes, you can check the repository on GitHub.
+You can view my portfolio website live at [https://rschleckser.github.io/](https://richschleckser.github.io/). For any updates or changes, you can check the repository on GitHub.
 
 ## Contact
 
