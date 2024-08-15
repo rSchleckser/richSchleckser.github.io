@@ -1,0 +1,24 @@
+
+.animateContainer{
+    background-color: #172523;
+    font-family: 'Reddit Mono', sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.animateBox{
+    /* background-color: #11dfc0; */
+    display: flex;
+    padding-top: 68.8px;
+    width: 100%;
+    max-width: 40rem;
+    border-bottom: 1px solid #DFFF5D ;
+}
+
+.animateBox h1{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 120%;
+}

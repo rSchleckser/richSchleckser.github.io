@@ -2,7 +2,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <div>
+    <div className='navContainer'>
       <h1>Logo</h1>
       <nav>
         <ul>
