@@ -11,10 +11,10 @@ const CardBar = () => {
           <Card
             key={color}
             style={{
-              height: '150px',
-              width: '110px',
+              height: '200px',
+              width: '150px',
               marginRight: '3rem',
-              marginTop: '2rem',
+              marginTop: '6rem',
               backgroundColor: color,
             }}
             color={color}

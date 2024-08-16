@@ -4,6 +4,7 @@ import LottieAnimation from '../LottieAnimation/LottieAnimation';
 import CardBar from '../CardBar/CardBar';
 import programmer from '../LottieAnimation/programmer.json';
 import collab from '../LottieAnimation/collab.json';
+import Textbar from '../TextBar/Textbar';
 
 const AnimationContainer = () => {
   return (
@@ -14,7 +15,8 @@ const AnimationContainer = () => {
             {' '}
             <div className='animateBox'>
               <h1>
-                The world’s leading skills verification for tomorrow{' '}
+                Embarking on a journey in software, fueled by a commitment to
+                growth{' '}
                 <section className='animation'>
                   <div className='first'>
                     <div> Web Developer </div>
@@ -54,6 +56,7 @@ const AnimationContainer = () => {
       </Grid>
 
       <CardBar />
+      <Textbar />
     </div>
   );
 };
