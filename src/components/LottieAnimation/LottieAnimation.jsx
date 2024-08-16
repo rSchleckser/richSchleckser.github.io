@@ -1,7 +1,7 @@
 import Lottie from 'react-lottie';
-import animationData from './programmer.json';
 
-const LottieAnimation = () => {
+const LottieAnimation = ({ animationData }) => {
+  // Destructure animationData from props
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -13,7 +13,7 @@ const LottieAnimation = () => {
 
   return (
     <Lottie
-      style={{ display: 'block' }}
+      style={{ display: 'flex', justifyContent: 'right', marginLeft: 'auto' }}
       options={defaultOptions}
       height={400}
       width={400}
