@@ -1,0 +1,28 @@
+/* #172523 Dark Green */
+/* #DFFF5D Light Green */
+/* #FFFFFF White Text */
+/* #F6F5F4 secondary background */
+/* #fff9 Grey Links*/
+/* #26443F secondary link */
+
+/* src/components/AboutSection/About.css */
+
+.aboutContainer {
+    padding: 2rem;
+    background-color: #f6f5f4;
+    color: #172523;
+  }
+  
+  .aboutContainer h1 {
+    font-family: 'Reddit Mono', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  
+  .aboutContainer p {
+    font-size: 18px;
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  

@@ -5,16 +5,13 @@ const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal'];
 
 const CardBar = () => {
   return (
-    <div>
-      <CardGroup itemsPerRow={6}>
+    <div className='cardContainer'>
+      <CardGroup>
         {colors.map((color) => (
           <Card
             key={color}
+            className='custom-card'
             style={{
-              height: '200px',
-              width: '150px',
-              marginRight: '3rem',
-              marginTop: '6rem',
               backgroundColor: color,
             }}
             color={color}

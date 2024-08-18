@@ -31,6 +31,7 @@ const AnimationContainer = () => {
               </h1>
             </div>
           </GridColumn>
+
           <GridColumn>
             {' '}
             <div
@@ -53,9 +54,11 @@ const AnimationContainer = () => {
             </div>
           </GridColumn>
         </GridRow>
-      </Grid>
 
-      <CardBar />
+        <GridRow columns={1}>
+          <CardBar />
+        </GridRow>
+      </Grid>
       <Textbar />
     </div>
   );

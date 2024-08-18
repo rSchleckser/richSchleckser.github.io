@@ -1,4 +1,23 @@
-div Card{
-    height: 150px;
-    width:110 px
-}
+.cardContainer {
+    width: 100%;
+  }
+  
+  .ui.cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  
+  .custom-card {
+    height: 200px !important;
+    width: 150px !important;
+    border-radius: 1rem !important;
+    transition: transform 0.3s ease; 
+    transform-origin: bottom center; 
+  }
+  
+  .custom-card:hover {
+    cursor: pointer;
+    transform: scaleX(1.2) scaleY(1.3); 
+  }
