@@ -6,13 +6,13 @@ const projects = [
     title: 'Mage Hopper',
     description:
       'A 2D game built with Phaser where the mage must avoid Vikings, collect keys, and escape the level.',
-    image: 'https://via.placeholder.com/400x225',
+    image: './assets/mage-hopper.png',
   },
   {
     title: 'Buster Movies',
     description:
       'A movie review website similar to IMDB, where users can gather information on movies, post reviews, and more.',
-    image: 'https://via.placeholder.com/300x168',
+    image: './assets/buster-movies.png',
   },
   {
     title: 'QuizMate',
