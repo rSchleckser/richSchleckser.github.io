@@ -1,0 +1,36 @@
+.projectSection {
+  padding: 2rem;
+  background-color: #172523;
+  color: #ffffff;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projectCard {
+  height: 100%;
+  background-color: #f6f5f4 !important;
+  color: #172523 !important;
+}
+
+.projectCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+  }
+  
+
+.projectCard .content {
+  background-color: #ffffff;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.projectCard img {
+  border-radius: 1rem 1rem 0 0;
+  height: 200px;
+  object-fit: cover;
+}

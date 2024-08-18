@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import AnimationContainer from './components/AnimationContainer/AnimationContainer';
 import AboutSection from './components/AboutSection/AboutSection';
+import ProjectSection from './components/ProjectSection/ProjectSection';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Navbar />
         <AnimationContainer />
         <AboutSection />
+        <ProjectSection />
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 import { Header, Segment, Image, Grid } from 'semantic-ui-react';
 import './AboutSection.css';
+import AboutPicture from './about_pic.jpg';
 
 const AboutSection = () => {
   return (
@@ -10,11 +11,7 @@ const AboutSection = () => {
         </Header>
         <Grid columns={2} stackable>
           <Grid.Column>
-            <Image
-              src='https://via.placeholder.com/300' // Replace with your own image
-              alt='About me'
-              rounded
-            />
+            <Image src={AboutPicture} alt='About me' rounded />
           </Grid.Column>
           <Grid.Column>
             <p style={{ fontSize: '18px', lineHeight: '1.6rem' }}>
