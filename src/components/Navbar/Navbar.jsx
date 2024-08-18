@@ -19,7 +19,14 @@ const Navbar = () => {
             <a href='#'>Contact</a>
           </li>
           <li>
-            <button>Download Resume</button>
+            <button className='downloadButton'>
+              <a
+                href='/Richard_Schleckser_Resume.docx'
+                download='Richard_Schleckser_Resume.docx'
+              >
+                Download Resume
+              </a>
+            </button>
           </li>
         </ul>
       </nav>

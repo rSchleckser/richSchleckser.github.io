@@ -12,6 +12,7 @@
     padding: 0.25rem;
 }
 
+
 nav {
     display: flex;
     width: 100%;
@@ -50,11 +51,20 @@ button {
     padding: 10px 20px;
     transition: background-color 1s ease;
 }
+button.downloadButton a{
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
 
 button:hover {
     color: #000;
     background-color: #DFFF5D;
     border: 1px solid #000;
+}
+
+button.downloadButton:hover a{
+    color: #000;
 }
 
 
