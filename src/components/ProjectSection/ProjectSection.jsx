@@ -18,7 +18,7 @@ const projects = [
     title: 'QuizMate',
     description:
       'A Django-based application for managing courses, quizzes, and students with a comprehensive instructor dashboard.',
-    image: 'https://via.placeholder.com/300x168',
+    image: './assets/quiz_mate.png',
   },
 ];
 

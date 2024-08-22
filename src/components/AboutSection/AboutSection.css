@@ -7,22 +7,73 @@
 
 /* src/components/AboutSection/About.css */
 
+
 .aboutContainer {
     padding: 2rem;
     background-color: #f6f5f4;
     color: #172523;
+    border-radius: 10%;
+    box-shadow: inset 1rem 1rem 4rem black;
+  }
+
+  div.ui.center.aligned.header.about-title{
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .about-photo{
+    border: 2px black solid;
+    border-radius: 25% 10%;
+    transition: box-shadow 0.6s ease-in-out; 
+    box-shadow: 0px 0px 0px transparent; 
+  }
+
+  @keyframes floatImage {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .about-description {
+    padding: 2rem; 
   }
   
-  .aboutContainer h1 {
-    font-family: 'Reddit Mono', sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-bottom: 2rem;
-  }
-  
-  .aboutContainer p {
+  .description-text {
     font-size: 18px;
     line-height: 1.6rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; 
   }
+  
+  .about-tech {
+    margin-top: 3rem; 
+    text-align: center;
+  }
+  
+  .about-tech h1 {
+    font-size: 24px; 
+    margin-bottom: 1rem;
+  }
+
+  .about-tech ul {
+    list-style-type: none; 
+    padding: 0; 
+  }
+
+  .about-tech li {
+    font-size: 18px;
+    line-height: 1.6rem;
+    margin: 0.5rem 0; 
+    padding: 0.5rem;
+    border: 1px solid #172523; 
+    border-radius: 5px; 
+    background-color: #ffffff; 
+  }
+  
+  
   
