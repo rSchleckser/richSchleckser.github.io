@@ -11,39 +11,39 @@
 }
 
 .projectCard {
-  height: 100%;
-  background-color: #f6f5f4 !important;
-  color: #172523 !important;
+  height: 300px;
+  width: 432px !important;
+  overflow: hidden;
 }
 
 .projectCard img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem 1rem 0 0;
-    object-fit: cover;
-  }
-  
+  height: calc(100% + 20px); 
+  width: calc(100% + 20px); 
+  object-fit: cover;
+}
+
+.projectCard:hover div.content {
+background-color: #F6F5F4 !important;
+}
+
+.projectCard:hover div.content div.header{
+  color: #172523 !important;
+}
+
+.projectCard:hover div.content div.description{
+  color: #172523 !important;
+}
+
+.projectCard:hover img{
+  cursor: pointer;
+  transform: scaleX(1.1);
+  height: 200px;
+  width: 100%;
+  overflow: visible;
+  object-fit: contain;
+}
 
 .projectCard .content {
   background-color: #ffffff;
   border-radius: 0 0 1rem 1rem;
 }
-
-.projectCard img {
-  border-radius: 1rem 1rem 0 0;
-  height: 200px;
-  object-fit: cover;
-}
-
-
-.projectCard video {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .projectCard:hover video {
-    transform: scale(1.1);
-  }
-  
