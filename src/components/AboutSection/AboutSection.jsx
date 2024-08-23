@@ -58,22 +58,22 @@ const AboutSection = () => {
           <Grid.Column>
             <div className='about-description'>
               <p className='description-text'>
-                Hello! My name is Richard Schleckser. I'm a passionate software
-                developer with a focus on building intuitive and engaging web
-                applications. My journey in software development began with a
-                strong desire to build, create, and develop
+                Hello! My name is Richard Schleckser. I&apos;m a passionate
+                software developer with a focus on building intuitive and
+                engaging web applications. My journey in software development
+                began with a strong desire to build, create, and develop
                 applications/software that are both useful and lasting.
               </p>
               <p className='description-text'>
-                Whether I'm working on frontend development, or backend, I bring
-                enthusiasm and a willingness to learn. I'm always working to
-                improve my code, my knowledge base of software development, and
-                technology use cases.
+                Whether I&apos;m working on frontend development, or backend, I
+                bring enthusiasm and a willingness to learn. I&apos;m always
+                working to improve my code, my knowledge base of software
+                development, and technology use cases.
               </p>
               <p className='description-text'>
-                When I'm not coding, you can find me playing videos games,
-                playing guitar, or spending time with the family. Let's connect
-                and see what we can create together!
+                When I&apos;m not coding, you can find me playing videos games,
+                playing guitar, or spending time with the family. Let&apos;s
+                connect and see what we can create together!
               </p>
             </div>
             <div className='about-tech'>

@@ -1,4 +1,5 @@
-.contactSection {
+div.contactSection {
+    margin-bottom: 22rem;
     padding: 2rem;
     background-color: #F6F5F4;
     border-radius: 8px;

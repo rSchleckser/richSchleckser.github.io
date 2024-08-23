@@ -4,6 +4,7 @@ import AnimationContainer from './components/AnimationContainer/AnimationContain
 import AboutSection from './components/AboutSection/AboutSection';
 import ProjectSection from './components/ProjectSection/ProjectSection';
 import ContactSection from './components/ContactSection/ContactSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <ProjectSection />
         <ContactSection />
       </div>
+      <Footer />
     </>
   );
 }

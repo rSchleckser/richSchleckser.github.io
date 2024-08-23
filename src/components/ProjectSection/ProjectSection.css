@@ -2,6 +2,7 @@
   padding: 2rem;
   background-color: #172523;
   color: #ffffff;
+  margin-bottom: 3rem;
 }
 
 .sectionTitle {
@@ -20,6 +21,7 @@
   height: calc(100% + 20px); 
   width: calc(100% + 20px); 
   object-fit: cover;
+  transition: 0.7s ease-out;
 }
 
 .projectCard:hover div.content {

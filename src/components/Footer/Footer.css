@@ -1,0 +1,36 @@
+.footer {
+    background-color: rgba(255, 252, 252, 0.726);
+    color: #26443F;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .footerLinks {
+    margin-top: 0.5rem;
+  }
+  
+  .footerLinks a {
+    color: #26443F;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .footerLinks a:hover {
+    text-decoration: underline;
+  }
+  
