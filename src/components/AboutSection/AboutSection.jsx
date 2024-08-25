@@ -40,6 +40,34 @@ const AboutSection = () => {
         ('');
       },
     });
+
+    ScrollReveal().reveal('.firstRow', {
+      origin: 'left',
+      distance: '80px',
+      duration: 1500,
+      delay: 1000,
+    });
+
+    ScrollReveal().reveal('.secondRow', {
+      origin: 'left',
+      distance: '80px',
+      duration: 1500,
+      delay: 1100,
+    });
+
+    ScrollReveal().reveal('.thirdRow', {
+      origin: 'left',
+      distance: '80px',
+      duration: 1500,
+      delay: 1200,
+    });
+
+    ScrollReveal().reveal('.fourthRow', {
+      origin: 'left',
+      distance: '80px',
+      duration: 1500,
+      delay: 1300,
+    });
   }, []);
 
   return (
@@ -89,6 +117,7 @@ const AboutSection = () => {
                         alt='React'
                         width='24'
                         height='24'
+                        className='firstRow'
                       />{' '}
                       React.js
                     </li>
@@ -98,6 +127,7 @@ const AboutSection = () => {
                         alt='Node'
                         width='24'
                         height='24'
+                        className='secondRow'
                       />{' '}
                       Node.js
                     </li>
@@ -107,6 +137,7 @@ const AboutSection = () => {
                         alt='Express'
                         width='24'
                         height='24'
+                        className='thirdRow'
                       />{' '}
                       Express.js
                     </li>
@@ -116,6 +147,7 @@ const AboutSection = () => {
                         alt='Mongo'
                         width='24'
                         height='24'
+                        className='fourthRow'
                       />{' '}
                       MongoDB
                     </li>
@@ -130,6 +162,7 @@ const AboutSection = () => {
                         alt='Python'
                         width='24'
                         height='24'
+                        className='firstRow'
                       />{' '}
                       Python
                     </li>
@@ -139,6 +172,7 @@ const AboutSection = () => {
                         alt='Django'
                         width='24'
                         height='24'
+                        className='secondRow'
                       />{' '}
                       Django
                     </li>
@@ -148,6 +182,7 @@ const AboutSection = () => {
                         alt='PostgresSQL'
                         width='24'
                         height='24'
+                        className='thirdRow'
                       />{' '}
                       PostgreSQL
                     </li>
