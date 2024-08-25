@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import ScrollReveal from 'scrollreveal';
 import {
   FormField,
   Button,
@@ -17,8 +18,21 @@ const ContactSection = () => {
     setShowCalendly(!showCalendly);
   };
 
+  useEffect(() => {
+    ScrollReveal().reveal('.contactSection', {
+      origin: 'top',
+      distance: '80px',
+      duration: 1500,
+      delay: 400,
+    });
+  }, []);
+
   return (
-    <div className='contactSection' style={{ marginBottom: '3rem' }}>
+    <div
+      className='contactSection'
+      id='contact'
+      style={{ marginBottom: '3rem' }}
+    >
       <h1 style={{ color: '#46552a;', textAlign: 'center' }}>
         Contact & Schedule
       </h1>
@@ -53,7 +67,11 @@ const ContactSection = () => {
           </FormField>
         </FormGroup>
 
-        <FormTextArea label='Message' placeholder='Feel Free to inquire' />
+        <FormTextArea
+          label='Message'
+          name='message'
+          placeholder='Feel Free to inquire'
+        />
 
         <Checkbox
           label='Would you like to schedule an appointment?'

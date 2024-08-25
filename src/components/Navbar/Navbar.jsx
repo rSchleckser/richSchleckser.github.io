@@ -3,20 +3,21 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <div className='navContainer'>
-      <h1>Logo</h1>
+      <h1>Richard Schleckser</h1>
+
       <nav>
         <ul>
           <li>
             <a href='#'>Home</a>
           </li>
           <li>
-            <a href='#'>About</a>
+            <a href='#about'>About</a>
           </li>
           <li>
-            <a href='#'>Projects</a>
+            <a href='#projects'>Projects</a>
           </li>
           <li>
-            <a href='#'>Contact</a>
+            <a href='#contact'>Contact</a>
           </li>
           <li>
             <button className='downloadButton'>

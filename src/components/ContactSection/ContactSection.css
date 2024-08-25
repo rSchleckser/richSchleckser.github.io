@@ -11,7 +11,7 @@ div.contactSection {
   .contactSection h1, .contactSection h2 {
     text-align: center;
     color: #46552a;
-
+    display: flex !important;
   }
   
   .contactForm {

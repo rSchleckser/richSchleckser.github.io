@@ -1,6 +1,5 @@
 import { CardGroup, Card, Image } from 'semantic-ui-react';
 import ScrollReveal from 'scrollreveal';
-
 import './ProjectSection.css';
 import { useEffect } from 'react';
 
@@ -51,7 +50,7 @@ const ProjectSection = () => {
   }, []);
 
   return (
-    <div className='projectSection'>
+    <div className='projectSection' id='projects'>
       <h2 className='sectionTitle'>Projects</h2>
       <CardGroup itemsPerRow={3}>
         {projects.map((project, index) => (

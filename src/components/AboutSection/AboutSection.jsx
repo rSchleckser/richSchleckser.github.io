@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import { Header, Segment, Image, Grid } from 'semantic-ui-react';
 import './AboutSection.css';
+// import ReactIcon from '';
 
 const AboutSection = () => {
   useEffect(() => {
@@ -42,7 +43,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <div className='aboutContainer'>
+    <div className='aboutContainer' id='about'>
       <Segment basic>
         <Header textAlign='center' className='about-title'>
           About Me
@@ -82,18 +83,74 @@ const AboutSection = () => {
                 <Grid.Column>
                   {' '}
                   <ul>
-                    <li>React.js</li>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>MongoDB</li>
+                    <li>
+                      <img
+                        src='./assets/icons/react-color.svg'
+                        alt='React'
+                        width='24'
+                        height='24'
+                      />{' '}
+                      React.js
+                    </li>
+                    <li>
+                      <img
+                        src='./assets/icons/node.svg'
+                        alt='Node'
+                        width='24'
+                        height='24'
+                      />{' '}
+                      Node.js
+                    </li>
+                    <li>
+                      <img
+                        src='./assets/icons/express.svg'
+                        alt='Express'
+                        width='24'
+                        height='24'
+                      />{' '}
+                      Express.js
+                    </li>
+                    <li>
+                      <img
+                        src='./assets/icons/mongodb.svg'
+                        alt='Mongo'
+                        width='24'
+                        height='24'
+                      />{' '}
+                      MongoDB
+                    </li>
                   </ul>
                 </Grid.Column>
                 <Grid.Column>
                   {' '}
                   <ul>
-                    <li>Python</li>
-                    <li>Django</li>
-                    <li>PostgreSQL</li>
+                    <li>
+                      <img
+                        src='./assets/icons/python.svg'
+                        alt='Python'
+                        width='24'
+                        height='24'
+                      />{' '}
+                      Python
+                    </li>
+                    <li>
+                      <img
+                        src='./assets/icons/django.svg'
+                        alt='Django'
+                        width='24'
+                        height='24'
+                      />{' '}
+                      Django
+                    </li>
+                    <li>
+                      <img
+                        src='./assets/icons/postgresql.svg'
+                        alt='PostgresSQL'
+                        width='24'
+                        height='24'
+                      />{' '}
+                      PostgreSQL
+                    </li>
                   </ul>
                 </Grid.Column>
               </Grid>
