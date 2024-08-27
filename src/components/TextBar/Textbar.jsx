@@ -9,7 +9,7 @@ const Textbar = () => {
             <p style={{ fontSize: '18px' }}>
               Hello! Welcome to my website! I&apos;m thrilled to have you here
               as I embark on my journey into the tech world. This website will
-              highlight my focus area in this field, and is growing everyday.
+              highlight my focus areas in this field, and is growing everyday.
               Feel free to explore my projects, learn more about my story, and
               reach out if you&apos;d like to connect. Enjoy your visit!
             </p>
