@@ -22,7 +22,7 @@ const Navbar = () => {
           <li>
             <button className='downloadButton'>
               <a
-                href='/Richard_Schleckser_Resume.docx'
+                href='./Richard_Schleckser_Resume.docx'
                 download='Richard_Schleckser_Resume.docx'
               >
                 Download Resume
