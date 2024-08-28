@@ -67,4 +67,23 @@ button.downloadButton:hover a{
     color: #000;
 }
 
+Button.ui.button.toggleButton{
+    display: none;
+}
 
+
+  @media (max-width: 1050px) {
+    .mainBar{
+       display: none;
+    }
+
+    Button.ui.button.toggleButton{
+        display: block;
+        background-color: transparent;
+        border: none; 
+        color: #DFFF5D; 
+        cursor: pointer; 
+    }
+
+    
+}

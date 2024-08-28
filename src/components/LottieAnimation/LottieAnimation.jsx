@@ -1,10 +1,17 @@
 import Lottie from 'react-lottie';
 
-const LottieAnimation = ({ animationData }) => {
-  // Destructure animationData from props
+const LottieAnimation = ({
+  animationData,
+  height,
+  width,
+  autoplay,
+  loop,
+  isStopped,
+  direction,
+}) => {
   const defaultOptions = {
-    loop: true,
-    autoplay: true,
+    loop: loop,
+    autoplay: autoplay,
     animationData: animationData,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
@@ -13,10 +20,11 @@ const LottieAnimation = ({ animationData }) => {
 
   return (
     <Lottie
-      style={{ display: 'flex', justifyContent: 'right', marginLeft: 'auto' }}
       options={defaultOptions}
-      height={300}
-      width={300}
+      height={height}
+      width={width}
+      isStopped={isStopped}
+      direction={direction}
     />
   );
 };

@@ -43,14 +43,26 @@ const AnimationContainer = () => {
                 position: 'relative',
               }}
             >
-              <LottieAnimation animationData={collab} />
+              <LottieAnimation
+                animationData={collab}
+                autoplay={true}
+                loop={true}
+                height={300}
+                width={300}
+              />
               <Divider vertical style={{ position: 'absolute', left: '50%' }}>
                 <Icon
                   className='arrows alternate horizontal'
                   style={{ fontSize: '2rem', color: '#DFFF5D' }}
                 ></Icon>
               </Divider>
-              <LottieAnimation animationData={programmer} />
+              <LottieAnimation
+                animationData={programmer}
+                autoplay={true}
+                loop={true}
+                height={300}
+                width={300}
+              />
             </div>
           </GridColumn>
         </GridRow>
