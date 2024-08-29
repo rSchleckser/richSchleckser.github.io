@@ -1,11 +1,12 @@
-import { Grid, GridColumn, GridRow } from 'semantic-ui-react';
+import { Grid, GridColumn, GridRow, Icon } from 'semantic-ui-react';
+import './Textbar.css';
+
 const Textbar = () => {
   return (
     <div style={{ marginTop: '3.5rem', marginBottom: '6rem' }}>
       <Grid divided='vertically'>
         <GridRow columns={2}>
           <GridColumn>
-            {' '}
             <p style={{ fontSize: '18px' }}>
               Hello! Welcome to my website! I&apos;m thrilled to have you here
               as I embark on my journey into the tech world. This website will
@@ -16,8 +17,19 @@ const Textbar = () => {
           </GridColumn>
           <GridColumn style={{ display: 'flex', justifyContent: 'center' }}>
             <div>
-              <button>Our Technology</button>
-              <button style={{ marginLeft: '2rem' }}>Request a Demo</button>
+              <a
+                href='https://www.linkedin.com/in/richard-schleckser-b4808487/'
+                target='_blank'
+              >
+                <button className='iconButton'>
+                  <Icon name='linkedin' size='huge' />
+                </button>
+              </a>
+              <a href='https://github.com/rSchleckser/' target='_blank'>
+                <button className='iconButton' style={{ marginLeft: '2rem' }}>
+                  <Icon name='github' size='huge' />
+                </button>
+              </a>
             </div>
           </GridColumn>
         </GridRow>

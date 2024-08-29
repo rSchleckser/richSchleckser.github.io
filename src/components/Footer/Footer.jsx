@@ -6,9 +6,9 @@ const Footer = () => {
       <div className='footerContent'>
         <p>&copy; 2024 Richard Schleckser. All rights reserved.</p>
         <div className='footerLinks'>
-          <a href='/about'>About</a>
-          <a href='/projects'>Projects</a>
-          <a href='/contact'>Contact</a>
+          <a href='#about'>About</a>
+          <a href='#projects'>Projects</a>
+          <a href='#contact'>Contact</a>
         </div>
       </div>
     </footer>

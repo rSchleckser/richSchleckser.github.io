@@ -1,0 +1,12 @@
+.iconButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .iconButton:hover {
+    transform: scale(1.1);
+    color: #26443F;
+  }
+  
