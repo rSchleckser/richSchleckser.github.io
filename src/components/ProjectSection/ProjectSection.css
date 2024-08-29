@@ -5,6 +5,14 @@
   margin-bottom: 3rem;
 }
 
+div#projects.projectSection div.ui.three.cards{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
 .sectionTitle {
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -48,4 +56,13 @@ background-color: #F6F5F4 !important;
 .projectCard .content {
   background-color: #ffffff;
   border-radius: 0 0 1rem 1rem;
+}
+
+
+@media (max-width: 1290px) {
+  div#projects.projectSection div.ui.three.cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
