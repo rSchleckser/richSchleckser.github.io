@@ -78,6 +78,7 @@ Button.ui.button.toggleButton{
     }
 
     Button.ui.button.toggleButton{
+        margin-left: auto; 
         display: block;
         background-color: transparent;
         border: none; 

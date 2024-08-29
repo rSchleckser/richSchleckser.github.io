@@ -1,5 +1,5 @@
 import './Navbar.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, Sidebar, Menu } from 'semantic-ui-react';
 import LottieAnimation from '../LottieAnimation/LottieAnimation';
 import closingX from '../LottieAnimation/closingX.json';
@@ -13,6 +13,16 @@ const Navbar = () => {
     setIsStopped(false);
     setDirection(direction === 1 ? -1 : 1);
   };
+
+  useEffect(() => {
+    if (visible) {
+      setDirection(1);
+      setIsStopped(false);
+    } else {
+      setDirection(-1);
+      setIsStopped(false);
+    }
+  }, [visible]);
 
   return (
     <div className='navContainer'>
