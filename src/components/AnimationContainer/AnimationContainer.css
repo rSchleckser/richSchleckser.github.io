@@ -67,3 +67,8 @@
     90% {margin-top: 0;}
     100% {margin-top: 0;}
   }
+  @media (max-width: 1290px) {
+    .animateContainer{
+      display: none;
+    }
+  }

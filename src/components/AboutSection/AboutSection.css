@@ -75,5 +75,17 @@
     background-color: #ffffff; 
   }
   
+
+  @media (max-width: 650px) {
+    .about-description{
+      padding: 0;
+    }
+
+    .about-tech li {
+      font-size: 11px;
+      padding: 5px 2px 5px 2px;
+      
+    }
+  }
   
   
