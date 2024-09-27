@@ -63,8 +63,8 @@ const Navbar = () => {
         </Menu.Item>
         <Menu.Item
           as='a'
-          href='/richSchleckser.github.io/Richard_Schleckser_Resume.docx'
-          download='Richard_Schleckser_Resume.docx'
+          href='/richSchleckser.github.io/Richard_Schleckser_Resume._Softwware.docx'
+          download='Richard_Schleckser_Resume_Software.docx'
         >
           {' '}
           Download Resume
@@ -89,7 +89,7 @@ const Navbar = () => {
           <li>
             <button className='downloadButton'>
               <a
-                href='/richSchleckser.github.io/Richard_Schleckser_Resume_Software.docx'
+                href='/richSchleckser.github.io/Richard_Schleckser_Resume._Softwware.docx'
                 download='Richard_Schleckser_Resume_Software.docx'
               >
                 Download Resume
