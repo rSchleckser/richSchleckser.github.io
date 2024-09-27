@@ -89,7 +89,7 @@ const Navbar = () => {
           <li>
             <button className='downloadButton'>
               <a
-                href='/richSchleckser.github.io/Richard_Schleckser_Resume._Softwware.docx'
+                href='/richSchleckser.github.io/Richard_Schleckser_Resume_Softwware.docx'
                 download='Richard_Schleckser_Resume_Software.docx'
               >
                 Download Resume
