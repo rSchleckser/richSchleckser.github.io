@@ -104,7 +104,7 @@ const ContactSection = () => {
           header='Form Completed'
           content="You're all signed up for the newsletter"
         />
-        <FormField style={{ marginTop: '2rem' }}>
+        <FormField>
           <Button className='green' type='submit'>
             Submit
           </Button>

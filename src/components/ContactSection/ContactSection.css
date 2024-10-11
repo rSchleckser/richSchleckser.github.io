@@ -1,5 +1,4 @@
 div.contactSection {
-    margin-bottom: 22rem;
     padding: 2rem;
     background-color: #F6F5F4;
     border-radius: 8px;
@@ -15,7 +14,11 @@ div.contactSection {
   }
   
   .contactForm {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  form.ui.form.contactForm div.field button{
+    margin-top: 2rem;
   }
   
   .calendarEmbed iframe {
