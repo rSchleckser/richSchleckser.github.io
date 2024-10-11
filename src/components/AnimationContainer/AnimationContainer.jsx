@@ -1,6 +1,7 @@
 import { Divider, Icon, Grid, GridColumn, GridRow } from 'semantic-ui-react';
 import './AnimationContainer.css';
 import LottieAnimation from '../LottieAnimation/LottieAnimation';
+import CardBar from '../CardBar/CardBar';
 import programmer from '../LottieAnimation/programmer.json';
 import collab from '../LottieAnimation/collab.json';
 import Textbar from '../TextBar/Textbar';
@@ -66,7 +67,9 @@ const AnimationContainer = () => {
           </GridColumn>
         </GridRow>
 
-        <GridRow columns={1}></GridRow>
+        <GridRow columns={1}>
+          <CardBar />
+        </GridRow>
       </Grid>
       <Textbar />
     </div>
