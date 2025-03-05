@@ -1,8 +1,10 @@
 import './Navbar.css';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 import { Button, Sidebar, Menu } from 'semantic-ui-react';
 import LottieAnimation from '../LottieAnimation/LottieAnimation';
 import closingX from '../LottieAnimation/closingX.json';
+
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const [isStopped, setIsStopped] = useState(true);
@@ -49,25 +51,57 @@ const Navbar = () => {
         width='thin'
         className='sideBar'
       >
-        <Menu.Item as='a' href='#'>
-          Home
+        <Menu.Item>
+          <Link
+            to='home'
+            smooth={true}
+            duration={500}
+            onClick={() => setVisible(false)}
+            className='nav-link'
+          >
+            Home
+          </Link>
         </Menu.Item>
-        <Menu.Item as='a' href='#about'>
-          About
+        <Menu.Item>
+          <Link
+            to='about'
+            smooth={true}
+            duration={500}
+            onClick={() => setVisible(false)}
+            className='nav-link'
+          >
+            About
+          </Link>
         </Menu.Item>
-        <Menu.Item as='a' href='#projects'>
-          Projects
+        <Menu.Item>
+          <Link
+            to='projects'
+            smooth={true}
+            duration={500}
+            onClick={() => setVisible(false)}
+            className='nav-link'
+          >
+            Projects
+          </Link>
         </Menu.Item>
-        <Menu.Item as='a' href='#contact'>
-          Contact
+        <Menu.Item>
+          <Link
+            to='contact'
+            smooth={true}
+            duration={500}
+            onClick={() => setVisible(false)}
+            className='nav-link'
+          >
+            Contact
+          </Link>
         </Menu.Item>
-        <Menu.Item
-          as='a'
-          href='/richSchleckser.github.io/Richard_Schleckser_Aircraft_Resume_Software.docx'
-          download='Richard_Schleckser_Aircraft_Resume_Software.docx'
-        >
-          {' '}
-          Download Resume
+        <Menu.Item>
+          <a
+            href='/richSchleckser.github.io/Richard_Schleckser_Aircraft_Resume_Software.docx'
+            download='Richard_Schleckser_Aircraft_Resume_Software.docx'
+          >
+            Download Resume
+          </a>
         </Menu.Item>
       </Sidebar>
 
@@ -75,16 +109,34 @@ const Navbar = () => {
       <nav className='mainBar'>
         <ul>
           <li>
-            <a href='#'>Home</a>
+            <Link to='home' smooth={true} duration={500} className='nav-link'>
+              Home
+            </Link>
           </li>
           <li>
-            <a href='#about'>About</a>
+            <Link to='about' smooth={true} duration={500} className='nav-link'>
+              About
+            </Link>
           </li>
           <li>
-            <a href='#projects'>Projects</a>
+            <Link
+              to='projects'
+              smooth={true}
+              duration={500}
+              className='nav-link'
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <a href='#contact'>Contact</a>
+            <Link
+              to='contact'
+              smooth={true}
+              duration={500}
+              className='nav-link'
+            >
+              Contact
+            </Link>
           </li>
           <li>
             <button className='downloadButton'>

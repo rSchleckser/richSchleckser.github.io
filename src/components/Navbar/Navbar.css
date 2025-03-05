@@ -1,47 +1,68 @@
-/* #172523 Dark Green */
-/* #DFFF5D Light Green */
-/* #FFFFFF White Text */
-/* #F6F5F4 secondary background */
-/* #fff9 Grey Links*/
-/* #26443F secondary link */
+/* Style for all links (including <Link> from react-scroll) */
+nav li a,
+nav li .nav-link,
+.sideBar a,
+.sideBar .nav-link {
+  text-decoration: none;
+  color: #fff9; /* Grey color for links */
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer; 
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+nav li a:hover,
+nav li .nav-link:hover,
+.sideBar a:hover,
+.sideBar .nav-link:hover {
+  color: #ffffff; /* White color on hover */
+}
+/* Navbar Container */
 .navContainer {
     background-color: #172523;
     color: #DFFF5D;
     display: flex;
     width: 100%;
     padding: 0.25rem;
-}
-
-
-nav {
+    align-items: center;
+  }
+  
+  /* Desktop Navbar */
+  nav {
     display: flex;
     width: 100%;
     height: 70px;
     justify-content: flex-end;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     display: flex;
     align-items: center;
-}
-
-nav li {
+  }
+  
+  nav li {
     list-style-type: none;
     padding: 20px;
-}
-
-nav li a {
+  }
+  
+  /* Style for all links */
+  nav li a {
     text-decoration: none;
-    color: #fff9;
+    color: #fff9; 
     font-size: 18px;
     font-weight: 400;
-}
-
-nav li a:hover {
-    color: #ffffff;
-}
-
-button {
+    cursor: pointer; 
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect for links */
+  nav li a:hover {
+    color: #ffffff; /* White color on hover */
+  }
+  
+  /* Download Button */
+  button {
     background-color: #172523;
     color: #ffffff;
     border: 1px solid #ffffff;
@@ -50,41 +71,54 @@ button {
     font-size: 15px;
     padding: 10px 20px;
     transition: background-color 1s ease;
-}
-button.downloadButton a{
+  }
+  
+  button.downloadButton a {
     font-size: 15px;
     font-weight: 600;
     color: #ffffff;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     color: #000;
     background-color: #DFFF5D;
     border: 1px solid #000;
-}
-
-button.downloadButton:hover a{
+  }
+  
+  button.downloadButton:hover a {
     color: #000;
-}
-
-Button.ui.button.toggleButton{
+  }
+  
+  /* Mobile Toggle Button */
+  Button.ui.button.toggleButton {
     display: none;
-}
-
-
+  }
+  
   @media (max-width: 1050px) {
-    .mainBar{
-       display: none;
+    .mainBar {
+      display: none;
     }
-
-    Button.ui.button.toggleButton{
-        margin-left: auto; 
-        display: block;
-        background-color: transparent;
-        border: none; 
-        color: #DFFF5D; 
-        cursor: pointer; 
+  
+    Button.ui.button.toggleButton {
+      margin-left: auto;
+      display: block;
+      background-color: transparent;
+      border: none;
+      color: #DFFF5D;
+      cursor: pointer;
     }
-
-    
-}
+  
+    /* Sidebar Styling */
+    .sideBar {
+      background-color: #172523;
+      padding-top: 20px;
+    }
+  
+    .sideBar a {
+      color: #DFFF5D !important; /* Ensure sidebar links are visible */
+    }
+  
+    .sideBar a:hover {
+      color: #ffffff !important; /* Change color on hover */
+    }
+  }
