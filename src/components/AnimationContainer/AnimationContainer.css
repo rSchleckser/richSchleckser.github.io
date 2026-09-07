@@ -1,74 +1,116 @@
-
-.animateContainer{  
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    padding: 1rem;         
-    gap: 1rem;
-    background-color: #172523;
-    color: #ffffff;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 3rem 0 2.5rem;
+  background-color: var(--color-bg, #172523);
+  color: var(--color-text, #ffffff);
 }
 
-.animateBox{
-    display: flex;
-    padding-top: 50px;
-    width: 100%;
-    border-bottom: 1px solid #DFFF5D ;
+.hero-content {
+  flex: 1 1 55%;
+  max-width: 560px;
 }
 
-.animateBox h1{
-    display: inline-block;
-    font-family: 'Reddit Mono', sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 120%;
-    padding-bottom: 2rem;
+.hero-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent, #DFFF5D);
+  font-weight: 600;
 }
 
-.animateBox h1 section div div::before{
-    content: '\276E';
+.hero-name {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-primary, 'Schibsted Grotesk', sans-serif);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
 }
 
-.animateBox h1 section div div::after{
-    content: '\276F';
+.hero-role {
+  margin: 0 0 1rem;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  color: var(--color-accent, #DFFF5D);
 }
 
-.animation {
-    display: inline-block;
-    height:50px;
-    overflow:hidden;
-    color: #DFFF5D;
-    vertical-align: middle;
+.hero-tagline {
+  margin: 0 0 1.75rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 42ch;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent, #DFFF5D);
+  color: var(--color-bg, #172523) !important;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  background-color: #ffffff;
+  outline: 2px solid var(--color-accent, #DFFF5D);
+  outline-offset: 2px;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.hero-social a {
+  color: var(--color-link-muted, rgba(255, 255, 255, 0.6));
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.hero-social a:hover,
+.hero-social a:focus-visible {
+  color: #ffffff;
+}
+
+.hero-visual {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 0 1.5rem;
+    gap: 1.5rem;
   }
-  
-  .animation > div > div {
-    padding: 0.25rem 0.75rem;
-    height:2.81rem;
-    margin-bottom: 2.81rem;
-    margin-left: 2rem;
-    display:inline-block;
+
+  .hero-visual {
+    display: none;
   }
-  
-  .animation div:first-child {
-    animation: text-animation 8s infinite;
+
+  .hero-content {
+    max-width: 100%;
   }
-  
-  
-  @keyframes text-animation {
-    0% {margin-top: 0;}
-    10% {margin-top: 0;}
-    20% {margin-top: -5.62rem;}
-    30% {margin-top: -5.62rem;}
-    40% {margin-top: -11.24rem;}
-    60% {margin-top: -11.24rem;}
-    70% {margin-top: -5.62rem;}
-    80% {margin-top: -5.62rem;}
-    90% {margin-top: 0;}
-    100% {margin-top: 0;}
+
+  .hero-tagline {
+    max-width: 100%;
   }
-  @media (max-width: 1290px) {
-    .animateContainer{
-      display: none;
-    }
-  }
+}

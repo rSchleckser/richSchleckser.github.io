@@ -1,76 +1,106 @@
-import { CardGroup, Card, Image } from 'semantic-ui-react';
+import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import './ProjectSection.css';
-import { useEffect } from 'react';
 
 const projects = [
   {
     title: 'Mage Hopper',
     description:
-      'A 2D game built with Phaser where the mage must avoid Vikings, collect keys, and escape the level.',
+      'A 2D Phaser game where the mage dodges Vikings, collects keys, and escapes each level.',
     image: './assets/mage-hopper.png',
-    url: 'https://rschleckser.github.io/mage-hopper/',
+    imageAlt: 'Screenshot of Mage Hopper gameplay with a mage character',
+    tech: ['Phaser', 'JavaScript', 'HTML5'],
+    liveUrl: 'https://rschleckser.github.io/mage-hopper/',
+    codeUrl: 'https://github.com/rSchleckser/mage-hopper',
   },
   {
     title: 'Buster Movies',
     description:
-      'A movie review website similar to IMDB, where users can gather information on movies, post reviews, and more.',
+      'A movie discovery and review app where users browse titles, read details, and share reviews.',
     image: './assets/buster-movies.png',
-    url: 'https://buster-movies-1.onrender.com/',
+    imageAlt: 'Screenshot of the Buster Movies review interface',
+    tech: ['React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://buster-movies-1.onrender.com/',
+    codeUrl: 'https://github.com/rSchleckser/Buster-movies',
   },
   {
     title: 'QuizMate',
     description:
-      'A Django-based application for managing courses, quizzes, and students with a comprehensive instructor dashboard.',
+      'A Django app for courses, quizzes, and students — includes an instructor/student dashboard.',
     image: './assets/quiz_mate.png',
-    url: 'https://courses-service-1f17.onrender.com',
+    imageAlt: 'Screenshot of the QuizMate course and quiz dashboard',
+    tech: ['Django', 'Python', 'PostgreSQL'],
+    liveUrl: 'https://courses-service-1f17.onrender.com',
+    codeUrl: 'https://github.com/rSchleckser/QuizMate',
   },
 ];
 
 const ProjectSection = () => {
   useEffect(() => {
-    ScrollReveal().reveal('.card-0', {
-      origin: 'right',
-      distance: '80px',
-      duration: 1500,
-      delay: 400,
-    });
-    ScrollReveal().reveal('.card-1', {
-      origin: 'bottom',
-      distance: '80px',
-      duration: 1500,
-      delay: 400,
-    });
-    ScrollReveal().reveal('.card-2', {
-      origin: 'left',
-      distance: '80px',
-      duration: 1500,
-      delay: 400,
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    projects.forEach((_, index) => {
+      ScrollReveal().reveal(`.card-${index}`, {
+        origin: 'bottom',
+        distance: '40px',
+        duration: 1000,
+        delay: 150 + index * 100,
+      });
     });
   }, []);
 
   return (
-    <div className='projectSection' id='projects'>
-      <h2 className='sectionTitle'>Projects</h2>
-      <CardGroup itemsPerRow={3}>
+    <section className='projectSection' id='projects'>
+      <h2 className='section-title'>Projects</h2>
+      <div className='project-grid'>
         {projects.map((project, index) => (
-          <a
-            key={index}
-            href={project.url}
-            target='_blank'
-            rel='noopener noreferrer'
+          <article
+            key={project.title}
+            className={`project-card card-${index}`}
           >
-            <Card key={index} className={`projectCard card-${index}`}>
-              <Image src={project.image} alt={project.title} />
-              <Card.Content>
-                <Card.Header>{project.title}</Card.Header>
-                <Card.Description>{project.description}</Card.Description>
-              </Card.Content>
-            </Card>
-          </a>
+            <div className='project-image-wrap'>
+              <img
+                src={project.image}
+                alt={project.imageAlt}
+                className='project-image'
+              />
+            </div>
+            <div className='project-body'>
+              <h3 className='project-title'>{project.title}</h3>
+              <p className='project-description'>{project.description}</p>
+              <ul className='project-tech' aria-label={`${project.title} technologies`}>
+                {project.tech.map((item) => (
+                  <li key={item} className='project-tech-chip'>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className='project-actions'>
+                <a
+                  href={project.liveUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='project-btn project-btn-live'
+                >
+                  View live
+                </a>
+                <a
+                  href={project.codeUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='project-btn project-btn-code'
+                >
+                  View code
+                </a>
+              </div>
+            </div>
+          </article>
         ))}
-      </CardGroup>
-    </div>
+      </div>
+    </section>
   );
 };
 

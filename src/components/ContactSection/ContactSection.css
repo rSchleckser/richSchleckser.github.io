@@ -1,31 +1,70 @@
-div.contactSection {
-    padding: 2rem;
-    background-color: #F6F5F4;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #46552a;
-  }
-  
-  .contactSection h1, .contactSection h2 {
-    text-align: center;
-    color: #46552a;
-    display: flex !important;
-  }
-  
-  .contactForm {
-    margin-bottom: 1rem;
-  }
+.contactSection {
+  padding: 2rem;
+  background-color: var(--color-card, #F6F5F4);
+  border-radius: var(--radius-card, 12px);
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  color: var(--color-text-dark, #172523);
+  box-shadow: var(--shadow-soft, 0 4px 16px rgba(0, 0, 0, 0.12));
+}
 
-  form.ui.form.contactForm div.field button{
-    margin-top: 2rem;
+.contactSection .section-title {
+  color: var(--color-text-dark, #172523);
+}
+
+.contactForm {
+  margin-bottom: 0;
+}
+
+.contactForm label {
+  color: var(--color-text-dark, #172523) !important;
+  font-weight: 600 !important;
+}
+
+/* High-contrast inputs — labels carry the meaning; no low-contrast placeholders */
+.contactForm input,
+.contactForm textarea {
+  color: var(--color-text-dark, #172523) !important;
+  background-color: #ffffff !important;
+  border: 1px solid rgba(23, 37, 35, 0.35) !important;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: var(--color-bg, #172523) !important;
+  outline: 2px solid var(--color-accent, #DFFF5D);
+  outline-offset: 1px;
+}
+
+.schedule-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--color-text-dark, #172523);
+}
+
+form.ui.form.contactForm div.field button.contact-submit,
+button.ui.button.contact-submit {
+  margin-top: 1.25rem;
+  background-color: var(--color-bg, #172523) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--color-bg, #172523);
+  border-radius: 2rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+}
+
+button.ui.button.contact-submit:hover,
+button.ui.button.contact-submit:focus-visible {
+  background-color: var(--color-accent, #DFFF5D) !important;
+  color: var(--color-bg, #172523) !important;
+  border-color: var(--color-bg, #172523);
+}
+
+@media (max-width: 650px) {
+  .contactSection {
+    padding: 1.5rem var(--space-mobile, 18px);
+    margin-bottom: 1.75rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   }
-  
-  .calendarEmbed iframe {
-    border-radius: 8px;
-    border: none;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-  }
-  
+}
