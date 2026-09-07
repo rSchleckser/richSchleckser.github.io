@@ -9,10 +9,10 @@ const experienceItems = [
     period: '2019 – Present',
     chips: ['Python', 'Bash', 'Integration', 'Automation'],
     bullets: [
-      'Manage end-to-end software loading, validation, and configuration for complex enterprise systems prior to deployment.',
-      'Build Python and Bash automation for software deployment and configuration verification, cutting manual processing time.',
+      'Own end-to-end software loading, validation, and configuration for complex enterprise systems before deployment.',
+      'Build Python and Bash automation for deployment and configuration verification, cutting manual processing time.',
       'Run integration testing and advanced troubleshooting on large-scale systems under strict operational and compliance requirements.',
-      'Act as technical liaison between engineering teams and external stakeholders to gather requirements and deliver solutions.',
+      'Serve as technical liaison between engineering teams and external stakeholders to gather requirements and deliver solutions.',
     ],
   },
   {
@@ -21,8 +21,8 @@ const experienceItems = [
     period: '2014 – 2019',
     chips: ['Systems', 'Troubleshooting', 'Operations'],
     bullets: [
-      'Advanced troubleshooting and maintenance on complex technical systems across high-volume operational environments.',
-      'Collaborated with teams to resolve issues and improve operational processes.',
+      'Performed advanced troubleshooting and maintenance on complex technical systems in high-volume operational environments.',
+      'Partnered with teams to resolve issues and improve operational processes.',
     ],
   },
 ];
