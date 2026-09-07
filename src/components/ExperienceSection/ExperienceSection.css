@@ -19,18 +19,6 @@
   margin-bottom: 0.35rem;
 }
 
-.experience-preview-note {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--color-bg, #172523);
-  background-color: var(--color-accent, #DFFF5D);
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  opacity: 0.9;
-}
-
 .experience-list {
   display: flex;
   flex-direction: column;
@@ -76,11 +64,20 @@
   white-space: nowrap;
 }
 
-.experience-summary {
+.experience-bullets {
   margin: 0 0 0.85rem;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: rgba(23, 37, 35, 0.85);
+  padding-left: 1.15rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(23, 37, 35, 0.88);
+}
+
+.experience-bullets li {
+  margin-bottom: 0.4rem;
+}
+
+.experience-bullets li:last-child {
+  margin-bottom: 0;
 }
 
 .experience-chips {
