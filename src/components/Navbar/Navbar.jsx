@@ -5,8 +5,7 @@ import { Button, Sidebar, Menu } from 'semantic-ui-react';
 import LottieAnimation from '../LottieAnimation/LottieAnimation';
 import closingX from '../LottieAnimation/closingX.json';
 
-const RESUME_HREF =
-  `${import.meta.env.BASE_URL}Richard_Schleckser_Aircraft_Resume_Software.docx`;
+const RESUME_HREF = `${import.meta.env.BASE_URL}Richard_Schleckser_Resume.pdf`;
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -67,101 +66,35 @@ const Navbar = () => {
         aria-label='Mobile navigation'
       >
         <Menu.Item>
-          <Link
-            to='home'
-            smooth={true}
-            duration={500}
-            onClick={closeSidebar}
-            className='nav-link'
-          >
-            Home
-          </Link>
+          <Link to='home' smooth={true} duration={500} onClick={closeSidebar} className='nav-link'>Home</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link
-            to='about'
-            smooth={true}
-            duration={500}
-            onClick={closeSidebar}
-            className='nav-link'
-          >
-            About
-          </Link>
+          <Link to='about' smooth={true} duration={500} onClick={closeSidebar} className='nav-link'>About</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link
-            to='projects'
-            smooth={true}
-            duration={500}
-            onClick={closeSidebar}
-            className='nav-link'
-          >
-            Projects
-          </Link>
+          <Link to='projects' smooth={true} duration={500} onClick={closeSidebar} className='nav-link'>Projects</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link
-            to='experience'
-            smooth={true}
-            duration={500}
-            onClick={closeSidebar}
-            className='nav-link'
-          >
-            Experience
-          </Link>
+          <Link to='experience' smooth={true} duration={500} onClick={closeSidebar} className='nav-link'>Experience</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link
-            to='contact'
-            smooth={true}
-            duration={500}
-            onClick={closeSidebar}
-            className='nav-link'
-          >
-            Contact
-          </Link>
+          <Link to='contact' smooth={true} duration={500} onClick={closeSidebar} className='nav-link'>Contact</Link>
         </Menu.Item>
         <Menu.Item>
-          <a href={RESUME_HREF} download='Richard_Schleckser_Aircraft_Resume_Software.docx'>
-            Download Resume
-          </a>
+          <a href={RESUME_HREF} download='Richard_Schleckser_Resume.pdf'>Download Resume</a>
         </Menu.Item>
       </Sidebar>
 
       <h1 className='mainBar brand-name'>Richard Schleckser</h1>
       <nav className='mainBar' aria-label='Primary'>
         <ul>
+          <li><Link to='home' smooth={true} duration={500} className='nav-link'>Home</Link></li>
+          <li><Link to='about' smooth={true} duration={500} className='nav-link'>About</Link></li>
+          <li><Link to='projects' smooth={true} duration={500} className='nav-link'>Projects</Link></li>
+          <li><Link to='experience' smooth={true} duration={500} className='nav-link'>Experience</Link></li>
+          <li><Link to='contact' smooth={true} duration={500} className='nav-link'>Contact</Link></li>
           <li>
-            <Link to='home' smooth={true} duration={500} className='nav-link'>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to='about' smooth={true} duration={500} className='nav-link'>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to='projects' smooth={true} duration={500} className='nav-link'>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to='experience' smooth={true} duration={500} className='nav-link'>
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link to='contact' smooth={true} duration={500} className='nav-link'>
-              Contact
-            </Link>
-          </li>
-          <li>
-            <a
-              className='downloadButton'
-              href={RESUME_HREF}
-              download='Richard_Schleckser_Aircraft_Resume_Software.docx'
-            >
+            <a className='downloadButton' href={RESUME_HREF} download='Richard_Schleckser_Resume.pdf'>
               Download Resume
             </a>
           </li>
