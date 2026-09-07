@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Richard Schleckser portfolio">
+  <rect width="1200" height="630" fill="#172523"/>
+  <rect x="64" y="64" width="1072" height="502" rx="24" fill="#F6F5F4"/>
+  <text x="100" y="250" font-family="Schibsted Grotesk, Arial, sans-serif" font-size="64" font-weight="700" fill="#172523">Richard Schleckser</text>
+  <text x="100" y="330" font-family="Schibsted Grotesk, Arial, sans-serif" font-size="36" font-weight="500" fill="#26443F">Full-stack Developer</text>
+  <rect x="100" y="380" width="220" height="48" rx="24" fill="#DFFF5D"/>
+  <text x="210" y="412" text-anchor="middle" font-family="Schibsted Grotesk, Arial, sans-serif" font-size="22" font-weight="700" fill="#172523">React · Node · Django</text>
+</svg>
