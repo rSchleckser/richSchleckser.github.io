@@ -1,20 +1,20 @@
-name: Deploy to GitHub Pages
+name: Deploy preview to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - preview/optional-improvements
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: pages
+  group: pages-preview
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build-and-deploy-preview:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,12 +29,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Build preview
+        run: npx vite build --base=/richSchleckser.github.io/preview/
 
-      - name: Deploy to gh-pages
+      - name: Deploy only preview/ on gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          destination_dir: preview
           keep_files: true

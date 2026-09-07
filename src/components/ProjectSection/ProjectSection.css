@@ -32,6 +32,7 @@
 }
 
 .project-image-wrap {
+  position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background-color: #e8e6e3;
@@ -42,6 +43,19 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.project-preview-badge {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  background-color: var(--color-accent, #DFFF5D);
+  color: var(--color-bg, #172523);
 }
 
 .project-body {
@@ -65,7 +79,32 @@
   font-size: 0.95rem;
   line-height: 1.5;
   color: rgba(23, 37, 35, 0.85);
+}
+
+.project-outcomes {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
   flex: 1;
+}
+
+.project-outcomes li {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: rgba(23, 37, 35, 0.8);
+}
+
+.project-wake-banner {
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--color-text-dark, #172523);
+  background-color: rgba(223, 255, 93, 0.28);
+  border: 1px solid rgba(23, 37, 35, 0.12);
+  border-radius: 8px;
 }
 
 .project-tech {

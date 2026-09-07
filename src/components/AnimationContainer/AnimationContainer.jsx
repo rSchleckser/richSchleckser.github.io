@@ -10,10 +10,12 @@ const AnimationContainer = () => {
       <div className='hero-content'>
         <p className='hero-eyebrow'>Portfolio</p>
         <h1 className='hero-name'>Richard Schleckser</h1>
-        <p className='hero-role'>Full-stack developer</p>
+        <p className='hero-role'>
+          Software Integration Engineer · Full-stack
+        </p>
         <p className='hero-tagline'>
-          Building intuitive web apps with React, Node, and Django — focused on
-          clean UX and lasting code.
+          Integrating and automating enterprise software at Boeing — and shipping
+          fullstack web apps with React, Node, Django, and AWS.
         </p>
         <Link
           to='projects'

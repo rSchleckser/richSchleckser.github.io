@@ -43,6 +43,66 @@
   color: var(--color-text-dark, #172523);
 }
 
+.about-credentials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 1.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.credential-block {
+  min-width: 0;
+}
+
+.credential-chip-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0;
+  margin: 0;
+}
+
+.credential-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-bg, #172523);
+  background-color: var(--color-accent, #DFFF5D);
+  border: 1px solid rgba(23, 37, 35, 0.12);
+  border-radius: 999px;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.education-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.education-school {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-dark, #172523);
+}
+
+.education-detail {
+  font-size: 0.85rem;
+  color: rgba(23, 37, 35, 0.75);
+  line-height: 1.4;
+}
+
 .about-tech {
   margin-top: 1.25rem;
 }
@@ -64,7 +124,6 @@
   margin: 0;
 }
 
-/* Quieter tech chips */
 .tech-chip {
   display: inline-flex;
   align-items: center;
@@ -97,6 +156,10 @@
   .about-photo-wrap {
     max-width: 280px;
     margin: 0 auto;
+  }
+
+  .about-credentials {
+    grid-template-columns: 1fr;
   }
 
   .description-text {
