@@ -7,110 +7,115 @@ import {
   Form,
   FormGroup,
   FormTextArea,
-  Message,
 } from 'semantic-ui-react';
 import './ContactSection.css';
 
 const ContactSection = () => {
-  const [showCalendly, setShowCalendly] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setShowCalendly(!showCalendly);
-  };
+  const [scheduleFollowUp, setScheduleFollowUp] = useState(false);
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    if (prefersReducedMotion) return;
+
     ScrollReveal().reveal('.contactSection', {
       origin: 'top',
-      distance: '80px',
-      duration: 1500,
-      delay: 400,
+      distance: '40px',
+      duration: 1000,
+      delay: 150,
     });
   }, []);
 
   return (
-    <div
-      className='contactSection'
-      id='contact'
-      style={{ marginBottom: '3rem' }}
-    >
-      <h1 style={{ color: '#46552a;', textAlign: 'center' }}>
-        Contact & Schedule
-      </h1>
+    <section className='contactSection' id='contact'>
+      <h2 className='section-title'>Contact</h2>
       <Form
         className='contactForm'
         action='https://formspree.io/f/xeojpery'
         method='POST'
       >
-        <FormField>
-          <label>Company</label>
-          <input placeholder='Company Name' name='company' />
-        </FormField>
         <FormGroup widths='equal'>
           <FormField>
-            <label>First Name</label>
-            <input placeholder='First Name' name='first_name' />
+            <label htmlFor='first_name'>First Name</label>
+            <input
+              id='first_name'
+              name='first_name'
+              autoComplete='given-name'
+              required
+            />
           </FormField>
           <FormField>
-            <label>Last Name</label>
-            <input placeholder='Last Name' name='last_name' />
+            <label htmlFor='last_name'>Last Name</label>
+            <input
+              id='last_name'
+              name='last_name'
+              autoComplete='family-name'
+              required
+            />
           </FormField>
         </FormGroup>
 
         <FormGroup widths='equal'>
           <FormField>
-            <label>Contact Number</label>
-            <input placeholder='Phone Number' name='phone' />
+            <label htmlFor='email'>Email</label>
+            <input
+              id='email'
+              type='email'
+              name='email'
+              autoComplete='email'
+              required
+            />
           </FormField>
           <FormField>
-            <label>Email</label>
-            <input placeholder='Email' name='email' />
+            <label htmlFor='phone'>Contact Number</label>
+            <input
+              id='phone'
+              type='tel'
+              name='phone'
+              autoComplete='tel'
+            />
           </FormField>
         </FormGroup>
+
+        <FormField>
+          <label htmlFor='company'>Company</label>
+          <input id='company' name='company' autoComplete='organization' />
+        </FormField>
 
         <FormTextArea
+          id='message'
           label='Message'
           name='message'
-          placeholder='Feel Free to inquire'
+          required
         />
 
-        <Checkbox
-          label='Would you like to schedule an appointment?'
-          onChange={handleCheckboxChange}
-          checked={showCalendly}
-        />
-
-        {showCalendly && (
-          <div className='calendarEmbed'>
-            <h2
-              style={{
-                color: '#46552a;',
-                textAlign: 'center',
-                marginTop: '2rem',
-              }}
-            >
-              Schedule an Appointment
-            </h2>
-            <iframe
-              src='https://calendly.com/rickyschleckser/30min'
-              width='100%'
-              height='600'
-              frameBorder='0'
-              scrolling='no'
-            ></iframe>
-          </div>
-        )}
-        <Message
-          success
-          header='Form Completed'
-          content="You're all signed up for the newsletter"
-        />
         <FormField>
-          <Button className='green' type='submit'>
+          <Checkbox
+            label='Would you like to schedule an appointment?'
+            onChange={() => setScheduleFollowUp(!scheduleFollowUp)}
+            checked={scheduleFollowUp}
+            name='schedule_appointment'
+          />
+          {scheduleFollowUp && (
+            <p className='schedule-note'>
+              If checked, I&apos;ll follow up with available times by email.
+            </p>
+          )}
+          <input
+            type='hidden'
+            name='schedule_requested'
+            value={scheduleFollowUp ? 'yes' : 'no'}
+          />
+        </FormField>
+
+        <FormField>
+          <Button className='contact-submit' type='submit'>
             Submit
           </Button>
         </FormField>
       </Form>
-    </div>
+    </section>
   );
 };
 
