@@ -4,20 +4,26 @@ import './ExperienceSection.css';
 
 const experienceItems = [
   {
-    role: 'Full-stack Developer (Portfolio focus)',
-    org: 'Personal / Contract-ready',
-    period: '2024 — Present',
-    chips: ['React', 'Node.js', 'Django', 'PostgreSQL'],
-    summary:
-      'Building end-to-end web apps with clear UX, API design, and deployable demos. Placeholder copy for preview — replace with real roles.',
+    role: 'Software Integration Engineer',
+    org: 'Boeing · Seattle, WA',
+    period: '2019 – Present',
+    chips: ['Python', 'Bash', 'Integration', 'Automation'],
+    bullets: [
+      'Manage end-to-end software loading, validation, and configuration for complex enterprise systems prior to deployment.',
+      'Build Python and Bash automation for software deployment and configuration verification, cutting manual processing time.',
+      'Run integration testing and advanced troubleshooting on large-scale systems under strict operational and compliance requirements.',
+      'Act as technical liaison between engineering teams and external stakeholders to gather requirements and deliver solutions.',
+    ],
   },
   {
-    role: 'Software Engineering Student',
-    org: 'General Assembly',
-    period: 'Immersive program',
-    chips: ['JavaScript', 'Python', 'MongoDB', 'Agile'],
-    summary:
-      'Shipped team and solo projects across the MERN stack and Django. Placeholder education entry for preview layout.',
+    role: 'Systems Technician',
+    org: 'Various Technical Operators (Regional, MRO, Corporate)',
+    period: '2014 – 2019',
+    chips: ['Systems', 'Troubleshooting', 'Operations'],
+    bullets: [
+      'Advanced troubleshooting and maintenance on complex technical systems across high-volume operational environments.',
+      'Collaborated with teams to resolve issues and improve operational processes.',
+    ],
   },
 ];
 
@@ -47,12 +53,11 @@ const ExperienceSection = () => {
     <section className='experienceSection' id='experience'>
       <div className='experience-header'>
         <h2 className='section-title experience-title'>Experience</h2>
-        <span className='experience-preview-note'>Preview placeholder</span>
       </div>
 
       <div className='experience-list'>
         {experienceItems.map((item) => (
-          <article key={item.role} className='experience-card'>
+          <article key={`${item.org}-${item.role}`} className='experience-card'>
             <div className='experience-card-top'>
               <div>
                 <h3 className='experience-role'>{item.role}</h3>
@@ -60,8 +65,18 @@ const ExperienceSection = () => {
               </div>
               <p className='experience-period'>{item.period}</p>
             </div>
-            <p className='experience-summary'>{item.summary}</p>
-            <ul className='experience-chips' aria-label={`${item.role} focus areas`}>
+            <ul
+              className='experience-bullets'
+              aria-label={`${item.role} highlights`}
+            >
+              {item.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+            <ul
+              className='experience-chips'
+              aria-label={`${item.role} focus areas`}
+            >
               {item.chips.map((chip) => (
                 <li key={chip} className='experience-chip'>
                   {chip}
