@@ -1,0 +1,113 @@
+.experienceSection {
+  padding: 1.5rem 0 2.5rem;
+  background-color: var(--color-bg, #172523);
+  color: var(--color-text, #ffffff);
+  margin-bottom: 1.5rem;
+}
+
+.experience-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.experienceSection .section-title {
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.experience-preview-note {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-bg, #172523);
+  background-color: var(--color-accent, #DFFF5D);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 1.25rem auto 0;
+}
+
+.experience-card {
+  background-color: var(--color-card, #F6F5F4);
+  color: var(--color-text-dark, #172523);
+  border-radius: var(--radius-card, 12px);
+  box-shadow: var(--shadow-soft, 0 4px 16px rgba(0, 0, 0, 0.12));
+  padding: 1.15rem 1.35rem 1.25rem;
+}
+
+.experience-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.experience-role {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: var(--font-primary, 'Schibsted Grotesk', sans-serif);
+}
+
+.experience-org {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+  color: rgba(23, 37, 35, 0.75);
+}
+
+.experience-period {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-link-secondary, #26443F);
+  white-space: nowrap;
+}
+
+.experience-summary {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(23, 37, 35, 0.85);
+}
+
+.experience-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  background-color: var(--color-accent, #DFFF5D);
+  color: var(--color-bg, #172523);
+  border: 1px solid rgba(23, 37, 35, 0.12);
+}
+
+@media (max-width: 650px) {
+  .experienceSection {
+    padding: 1rem 0 1.75rem;
+  }
+
+  .experience-card {
+    padding: 1rem 1.05rem 1.1rem;
+  }
+}

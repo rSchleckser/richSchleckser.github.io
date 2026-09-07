@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import AnimationContainer from './components/AnimationContainer/AnimationContainer';
 import AboutSection from './components/AboutSection/AboutSection';
 import ProjectSection from './components/ProjectSection/ProjectSection';
+import ExperienceSection from './components/ExperienceSection/ExperienceSection';
 import ContactSection from './components/ContactSection/ContactSection';
 import Footer from './components/Footer/Footer';
 
@@ -14,6 +15,7 @@ function App() {
         <AnimationContainer />
         <AboutSection />
         <ProjectSection />
+        <ExperienceSection />
         <ContactSection />
       </div>
       <Footer />
