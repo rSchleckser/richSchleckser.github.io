@@ -1,19 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+/* Design tokens */
+:root {
+  --color-bg: #172523;
+  --color-accent: #DFFF5D;
+  --color-card: #F6F5F4;
+  --color-card-white: #ffffff;
+  --color-text: #ffffff;
+  --color-text-dark: #172523;
+  --color-link-muted: rgba(255, 255, 255, 0.6);
+  --color-link-secondary: #26443F;
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-soft-inset: inset 0 2px 12px rgba(0, 0, 0, 0.08);
+  --font-primary: 'Schibsted Grotesk', 'Roboto', sans-serif;
+  --space-mobile: 18px;
+  --radius-card: 12px;
+}
 
-/* #172523 Dark Green */
-/* #DFFF5D Light Green */
-/* #FFFFFF White Text */
-/* #F6F5F4 secondary background */
-/* #fff9 Grey Links*/
-/* #26443F secondary link */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-
-html, body {
-  background-color:#172523 ;
-  font-family: 'Schibsted Grotesk', sans-serif;
+html,
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-primary);
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  color: var(--color-text);
+}
+
+/* Shared section H2 — used across About, Projects, Contact */
+.section-title {
+  font-family: var(--font-primary);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 1.75rem;
+  color: inherit;
+}
+
+@media (max-width: 650px) {
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
 }

@@ -1,78 +1,64 @@
-import { Divider, Icon, Grid, GridColumn, GridRow } from 'semantic-ui-react';
 import './AnimationContainer.css';
+import { Link } from 'react-scroll';
 import LottieAnimation from '../LottieAnimation/LottieAnimation';
-import CardBar from '../CardBar/CardBar';
 import programmer from '../LottieAnimation/programmer.json';
 import collab from '../LottieAnimation/collab.json';
-import Textbar from '../TextBar/Textbar';
 
 const AnimationContainer = () => {
   return (
-    <div className='animateContainer'>
-      <Grid divided='vertically'>
-        <GridRow columns={2}>
-          <GridColumn>
-            {' '}
-            <div className='animateBox'>
-              <h1>
-                Embarking on a journey in software, fueled by a commitment to
-                growth{' '}
-                <section className='animation'>
-                  <div className='first'>
-                    <div> Web Developer </div>
-                  </div>
-                  <div className='second'>
-                    <div> Frontend Engineer </div>
-                  </div>
-                  <div className='third'>
-                    <div> Backend Engineer </div>
-                  </div>
-                </section>
-              </h1>
-            </div>
-          </GridColumn>
+    <section className='hero' id='home' aria-label='Introduction'>
+      <div className='hero-content'>
+        <p className='hero-eyebrow'>Portfolio</p>
+        <h1 className='hero-name'>Richard Schleckser</h1>
+        <p className='hero-role'>Full-stack developer</p>
+        <p className='hero-tagline'>
+          Building intuitive web apps with React, Node, and Django — focused on
+          clean UX and lasting code.
+        </p>
+        <Link
+          to='projects'
+          smooth={true}
+          duration={500}
+          className='hero-cta'
+          role='button'
+        >
+          View projects
+        </Link>
+        <div className='hero-social'>
+          <a
+            href='https://github.com/rSchleckser'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            GitHub
+          </a>
+          <a
+            href='https://www.linkedin.com/in/richard-schleckser-b4808487/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
 
-          <GridColumn>
-            {' '}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: '3rem',
-                position: 'relative',
-              }}
-            >
-              <LottieAnimation
-                animationData={collab}
-                autoplay={true}
-                loop={true}
-                height={300}
-                width={300}
-              />
-              <Divider vertical style={{ position: 'absolute', left: '50%' }}>
-                <Icon
-                  className='arrows alternate horizontal'
-                  style={{ fontSize: '2rem', color: '#DFFF5D' }}
-                ></Icon>
-              </Divider>
-              <LottieAnimation
-                animationData={programmer}
-                autoplay={true}
-                loop={true}
-                height={300}
-                width={300}
-              />
-            </div>
-          </GridColumn>
-        </GridRow>
-
-        <GridRow columns={1}>
-          <CardBar />
-        </GridRow>
-      </Grid>
-      <Textbar />
-    </div>
+      <div className='hero-visual' aria-hidden='true'>
+        <LottieAnimation
+          animationData={collab}
+          autoplay={true}
+          loop={true}
+          height={220}
+          width={220}
+        />
+        <LottieAnimation
+          animationData={programmer}
+          autoplay={true}
+          loop={true}
+          height={220}
+          width={220}
+        />
+      </div>
+    </section>
   );
 };
 
