@@ -10,6 +10,10 @@ const projects = [
     image: './assets/mage-hopper.png',
     imageAlt: 'Screenshot of Mage Hopper gameplay with a mage character',
     tech: ['Phaser', 'JavaScript', 'HTML5'],
+    outcomes: [
+      'Shipped a playable browser game with collision, scoring, and level progression.',
+      'Built reusable Phaser scenes for menus, gameplay, and win/lose states.',
+    ],
     liveUrl: 'https://rschleckser.github.io/mage-hopper/',
     codeUrl: 'https://github.com/rSchleckser/mage-hopper',
   },
@@ -20,6 +24,10 @@ const projects = [
     image: './assets/buster-movies.png',
     imageAlt: 'Screenshot of the Buster Movies review interface',
     tech: ['React', 'Node.js', 'MongoDB'],
+    outcomes: [
+      'Enabled users to browse titles and leave persistent reviews backed by MongoDB.',
+      'Connected a React client to a Node API for discovery and review CRUD flows.',
+    ],
     liveUrl: 'https://buster-movies-1.onrender.com/',
     codeUrl: 'https://github.com/rSchleckser/Buster-movies',
   },
@@ -30,10 +38,17 @@ const projects = [
     image: './assets/quiz_mate.png',
     imageAlt: 'Screenshot of the QuizMate course and quiz dashboard',
     tech: ['Django', 'Python', 'PostgreSQL'],
+    outcomes: [
+      'Delivered role-based instructor and student dashboards for courses and quizzes.',
+      'Modeled course/quiz data in PostgreSQL with Django auth and views.',
+    ],
     liveUrl: 'https://courses-service-1f17.onrender.com',
     codeUrl: 'https://github.com/rSchleckser/QuizMate',
   },
 ];
+
+const isRenderHost = (url) =>
+  typeof url === 'string' && url.toLowerCase().includes('render.com');
 
 const ProjectSection = () => {
   useEffect(() => {
@@ -56,49 +71,74 @@ const ProjectSection = () => {
     <section className='projectSection' id='projects'>
       <h2 className='section-title'>Projects</h2>
       <div className='project-grid'>
-        {projects.map((project, index) => (
-          <article
-            key={project.title}
-            className={`project-card card-${index}`}
-          >
-            <div className='project-image-wrap'>
-              <img
-                src={project.image}
-                alt={project.imageAlt}
-                className='project-image'
-              />
-            </div>
-            <div className='project-body'>
-              <h3 className='project-title'>{project.title}</h3>
-              <p className='project-description'>{project.description}</p>
-              <ul className='project-tech' aria-label={`${project.title} technologies`}>
-                {project.tech.map((item) => (
-                  <li key={item} className='project-tech-chip'>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className='project-actions'>
-                <a
-                  href={project.liveUrl}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='project-btn project-btn-live'
-                >
-                  View live
-                </a>
-                <a
-                  href={project.codeUrl}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='project-btn project-btn-code'
-                >
-                  View code
-                </a>
+        {projects.map((project, index) => {
+          const needsWakeNote = isRenderHost(project.liveUrl);
+
+          return (
+            <article
+              key={project.title}
+              className={`project-card card-${index}`}
+            >
+              <div className='project-image-wrap'>
+                <img
+                  src={project.image}
+                  alt={project.imageAlt}
+                  className='project-image'
+                />
+                {needsWakeNote && (
+                  <span className='project-preview-badge' aria-hidden='true'>
+                    PREVIEW
+                  </span>
+                )}
               </div>
-            </div>
-          </article>
-        ))}
+              <div className='project-body'>
+                <h3 className='project-title'>{project.title}</h3>
+                <p className='project-description'>{project.description}</p>
+                {project.outcomes?.length > 0 && (
+                  <ul className='project-outcomes' aria-label={`${project.title} outcomes`}>
+                    {project.outcomes.map((outcome) => (
+                      <li key={outcome}>{outcome}</li>
+                    ))}
+                  </ul>
+                )}
+                {needsWakeNote && (
+                  <p className='project-wake-banner' role='note'>
+                    Live demo may take a few seconds to wake — free hosting
+                    spins down when idle.
+                  </p>
+                )}
+                <ul
+                  className='project-tech'
+                  aria-label={`${project.title} technologies`}
+                >
+                  {project.tech.map((item) => (
+                    <li key={item} className='project-tech-chip'>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className='project-actions'>
+                  <a
+                    href={project.liveUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='project-btn project-btn-live'
+                  >
+                    View live
+                  </a>
+                  <a
+                    href={project.codeUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='project-btn project-btn-code'
+                  >
+                    View code
+                  </a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
