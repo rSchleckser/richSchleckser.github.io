@@ -25,8 +25,8 @@ const projects = [
     imageAlt: 'Screenshot of the Buster Movies review interface',
     tech: ['React', 'Node.js', 'MongoDB'],
     outcomes: [
-      'Enabled users to browse titles and leave persistent reviews backed by MongoDB.',
-      'Connected a React client to a Node API for discovery and review CRUD flows.',
+      'Integrated a React client with a Node API for discovery and review CRUD flows.',
+      'Automated persistent review storage with MongoDB so feedback survives across sessions.',
     ],
     liveUrl: 'https://buster-movies-1.onrender.com/',
     codeUrl: 'https://github.com/rSchleckser/Buster-movies',
@@ -40,7 +40,7 @@ const projects = [
     tech: ['Django', 'Python', 'PostgreSQL'],
     outcomes: [
       'Delivered role-based instructor and student dashboards for courses and quizzes.',
-      'Modeled course/quiz data in PostgreSQL with Django auth and views.',
+      'Integrated Django auth and PostgreSQL models for reliable enrollment and quiz data.',
     ],
     liveUrl: 'https://courses-service-1f17.onrender.com',
     codeUrl: 'https://github.com/rSchleckser/QuizMate',
