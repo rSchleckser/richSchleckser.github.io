@@ -6,7 +6,7 @@ import LottieAnimation from '../LottieAnimation/LottieAnimation';
 import closingX from '../LottieAnimation/closingX.json';
 
 const RESUME_HREF =
-  '/richSchleckser.github.io/Richard_Schleckser_Aircraft_Resume_Software.docx';
+  `${import.meta.env.BASE_URL}Richard_Schleckser_Aircraft_Resume_Software.docx`;
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -101,6 +101,17 @@ const Navbar = () => {
         </Menu.Item>
         <Menu.Item>
           <Link
+            to='experience'
+            smooth={true}
+            duration={500}
+            onClick={closeSidebar}
+            className='nav-link'
+          >
+            Experience
+          </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link
             to='contact'
             smooth={true}
             duration={500}
@@ -133,6 +144,11 @@ const Navbar = () => {
           <li>
             <Link to='projects' smooth={true} duration={500} className='nav-link'>
               Projects
+            </Link>
+          </li>
+          <li>
+            <Link to='experience' smooth={true} duration={500} className='nav-link'>
+              Experience
             </Link>
           </li>
           <li>
